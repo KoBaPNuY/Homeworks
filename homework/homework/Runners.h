@@ -13,13 +13,13 @@
 @required
 
 @property (strong, nonatomic) NSString* runSpeed;
-@property (strong, nonatomic) NSString* runTime;
+@property (strong, nonatomic) NSString* name;
 
 -(void) run;
 
 @optional
 
--(void) speed;
+-(void) song;
 
 
 @end

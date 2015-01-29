@@ -9,6 +9,40 @@
 #import "PostMan.h"
 #import "Runners.h"
 
-@implementation PostMan<Runners>
+@implementation PostMan
+
+
+-(void) jump
+{
+    
+}
+
+
+-(void) run
+{
+    
+}
+
+-(NSString*) name
+{
+    return @"Iniesto";
+}
+
+
+-(NSString*) jumpLevel
+{
+    return @"5 meters";
+}
+
+-(NSString*) runSpeed
+{
+    return @"50 km/h";
+}
+
+-(void) song
+{
+    NSLog(@"Нас не догонят!!!");
+}
+
 
 @end

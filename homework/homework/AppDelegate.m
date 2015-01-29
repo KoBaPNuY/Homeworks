@@ -7,6 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "Fish.h"
+#import "Kangaroo.h"
+#import "Horse.h"
+#import "Sportsman.h"
+#import "PostMan.h"
+#include "Jumpers.h"
+#import "Swimmers.h"
+#import "Runners.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +24,46 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+  
+    Fish* fish = [[Fish alloc] init];
+    Kangaroo* kangaroo = [[Kangaroo alloc] init];
+    Horse* horse = [[Horse alloc] init];
+    Sportsman* sportsman = [[Sportsman alloc] init];
+    PostMan* postMan = [[PostMan alloc] init];
+    
+    
+    
+    
+    NSArray* they = [NSArray arrayWithObjects:horse, sportsman, postMan, kangaroo, fish, nil];
+    
+    for (int i = 0; i < [they count]; i++)
+    {
+        id <Jumpers, Swimmers, Runners> skils = [they objectAtIndex:i];
+        
+        if ([skils conformsToProtocol:@protocol(Runners)])
+        {
+          NSLog(@"I am %@ and my speed %@", skils.name, skils.runSpeed);
+            
+            if ([skils conformsToProtocol:@protocol(Jumpers)])
+            {
+                NSLog(@"I am %@ and my Jump Hight is %@", skils.name, skils.jumpLevel);
+                
+                if ([skils conformsToProtocol:@protocol(Swimmers)])
+                {
+                    NSLog(@"I am %@ and my Sweem speed %@", skils.name, skils.swimSpeed);
+                }
+            }
+        }
+        else
+    {
+        NSLog(@"Crushed!!!");
+    }
+
+    }
+
+    
+
+    
     return YES;
 }
 

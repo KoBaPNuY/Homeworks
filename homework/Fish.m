@@ -10,4 +10,26 @@
 
 @implementation Fish
 
+
+
+-(NSString*) name
+{
+    return @"Homer";
+}
+
+-(NSString*) swimSpeed
+{
+    return @"100km/h";
+}
+
+-(void) swim
+{
+    NSLog(@"Все плывут и я плыву!!!");
+}
+
+-(void) song
+{
+    NSLog(@"Оставайся мальчик  с нами Будешь нашим королем!!!!!");
+}
+
 @end

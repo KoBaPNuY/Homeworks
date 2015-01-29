@@ -10,4 +10,27 @@
 
 @implementation Kangaroo
 
+-(void) jump
+{
+    
+}
+
+-(NSString*) name
+{
+    return @"Jack";
+}
+
+-(NSString*) jumpLevel
+{
+    return @"25 meters";
+}
+
+-(void) song
+{
+    NSLog(@"Прыгай выше мы за тобою следом!");
+}
+
+
+
+
 @end

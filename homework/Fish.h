@@ -11,7 +11,11 @@
 
 @interface Fish : NSObject <Swimmers>
 
+@property (strong, nonatomic) NSString* swimSpeed;
 
--(void) dive;
+@property (strong, nonatomic) NSString* name;
+
+
+
 
 @end

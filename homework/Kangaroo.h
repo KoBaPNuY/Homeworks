@@ -12,5 +12,9 @@
 
 @interface Kangaroo : NSObject<Jumpers>
 
+@property (strong, nonatomic) NSString* jumpLevel;
+
+@property (strong, nonatomic) NSString* name;
+
 
 @end

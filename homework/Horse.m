@@ -10,4 +10,27 @@
 
 @implementation Horse
 
+-(void) run
+{
+    
+}
+
+-(NSString*) name
+{
+    return @"Poponi";
+}
+
+-(NSString*) runSpeed
+{
+    return @"60 km/h";
+}
+
+-(void) song
+{
+    NSLog(@"А ты беги беги беги...");
+}
+
+
+
+
 @end

@@ -13,13 +13,14 @@
 @required
 
 @property (strong, nonatomic) NSString* jumpLevel;
-@property (strong, nonatomic) NSString* jumpNumber;
+@property (strong, nonatomic) NSString* name;
+
 
 -(void) jump;
 
 
 @optional
 
--(void) push;
+-(void) song;
 
 @end

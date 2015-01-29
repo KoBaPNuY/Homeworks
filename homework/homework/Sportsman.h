@@ -14,19 +14,17 @@
 @interface Sportsman : NSObject<Jumpers, Runners, Swimmers>
 
 @property (strong, nonatomic) NSString* runSpeed;
-@property (strong, nonatomic) NSString* runTime;
+
 
 @property (strong, nonatomic) NSString* swimSpeed;
-@property (strong, nonatomic) NSString* swimTime;
+
 
 @property (strong, nonatomic) NSString* jumpLevel;
-@property (strong, nonatomic) NSString* jumpNumber;
 
--(void) jump;
 
--(void) swim;
+@property (strong, nonatomic) NSString* name;
 
--(void) run;
+
 
 
 @end

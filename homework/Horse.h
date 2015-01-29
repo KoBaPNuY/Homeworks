@@ -12,6 +12,10 @@
 
 @interface Horse : NSObject<Runners>
 
+@property (strong, nonatomic) NSString* runSpeed;
+
+@property (strong, nonatomic) NSString* name;
+
 
 
 

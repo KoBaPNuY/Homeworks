@@ -13,12 +13,13 @@
 @required
 
 @property (strong, nonatomic) NSString* swimSpeed;
-@property (strong, nonatomic) NSString* swimTime;
+@property (strong, nonatomic) NSString* name;
+
 
 -(void) swim;
 
 @optional
 
--(void) dive;
+-(void) song;
 
 @end
