@@ -18,4 +18,6 @@
 
 @property (strong, nonatomic) NSString* name;
 
+-(void) song;
+
 @end

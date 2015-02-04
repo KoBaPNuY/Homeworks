@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSString* name;
 
 
+-(void) swim;
 
+-(void) song;
 
 @end

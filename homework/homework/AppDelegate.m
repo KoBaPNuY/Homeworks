@@ -34,33 +34,48 @@
     
     
     
-    NSArray* they = [NSArray arrayWithObjects:horse, sportsman, postMan, kangaroo, fish, nil];
+    NSArray* they = @[horse, sportsman, postMan, kangaroo, fish];
     
     for (int i = 0; i < [they count]; i++)
     {
-        id <Jumpers, Swimmers, Runners> skils = [they objectAtIndex:i];
+        id <Jumpers, Swimmers, Runners> skills = [they objectAtIndex:i];
         
-        if ([skils conformsToProtocol:@protocol(Runners)])
+        if ([skills conformsToProtocol:@protocol(Runners)])
         {
-          NSLog(@"I am %@ and my speed %@", skils.name, skils.runSpeed);
+            NSLog(@"I am %@ and my speed %@", skills.name, skills.runSpeed);
             
-            if ([skils conformsToProtocol:@protocol(Jumpers)])
+            if ([skills conformsToProtocol:@protocol(Runners)])
+                  {
+                      [skills song];
+                  }
+        }
+        
+            
+            if ([skills conformsToProtocol:@protocol(Jumpers)])
             {
-                NSLog(@"I am %@ and my Jump Hight is %@", skils.name, skils.jumpLevel);
+                NSLog(@"I am %@ and my Jump Hight is %@", skills.name, skills.jumpLevel);
                 
-                if ([skils conformsToProtocol:@protocol(Swimmers)])
+                if ([skills conformsToProtocol:@protocol(Jumpers)])
                 {
-                    NSLog(@"I am %@ and my Sweem speed %@", skils.name, skils.swimSpeed);
+                    [skills song];
                 }
             }
-        }
-        else
-    {
-        NSLog(@"Crushed!!!");
-    }
+        
+                if ([skills conformsToProtocol:@protocol(Swimmers)])
+                {
+                    NSLog(@"I am %@ and my Sweem speed %@", skills.name, skills.swimSpeed);
+                    
+                    if ([skills conformsToProtocol:@protocol(Swimmers)])
+                    {
+                        [skills song];
+                    }
+                }
 
     }
 
+    
+    
+    
     
 
     

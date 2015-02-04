@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Jumpers.h"
-#import "Runners.h"
+
 
 @interface Kangaroo : NSObject<Jumpers>
 
@@ -16,5 +16,7 @@
 
 @property (strong, nonatomic) NSString* name;
 
+-(void) jump;
+-(void) song;
 
 @end
